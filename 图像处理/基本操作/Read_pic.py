@@ -21,7 +21,7 @@ def cv_imshow(name,img):
 img = cv2.imread('car.jpg')  #opencv默认为读取BGR
 cv_imshow("car",img)
 
-img_gray = cv2.imread("car.jpg",cv2.IMREAD_GRAYSCALE)
+img_gray = cv2.imread("car.jpg", cv2.IMREAD_GRAYSCALE)
 cv_imshow("GRAY_CAR",img_gray)
 
 #保存图像
