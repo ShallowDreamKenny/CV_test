@@ -11,7 +11,7 @@ import cv2
 import matplotlib.pyplot as plt
 import numpy as np
 
-img = cv2.imread("../图像阈值/pic1.png")
+img = cv2.imread("pic1.png")
 plt.subplot(321),plt.imshow(img)
 
 # 平均卷积 均值滤波
