@@ -18,7 +18,7 @@ from matplotlib import pyplot as plt
 #   TOZERO  大于阈值不变，小于取0
 #   TOZERO_INV  翻转TOZERO
 
-cat = cv2.imread("../基本操作/cat.jpg")
+cat = cv2.imread("../1. 基本操作/cat.jpg")
 
 cat_gray = cv2.cvtColor(cat,cv2.COLOR_BGR2GRAY)
 cat = cv2.cvtColor(cat,cv2.COLOR_BGR2RGB)
