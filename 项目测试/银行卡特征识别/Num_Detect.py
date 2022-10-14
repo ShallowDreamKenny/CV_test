@@ -28,8 +28,16 @@ def show_cv(img,name):
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
+def tem_pretreat(img):
+    gray_pic = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+    ret, threshold= cv2.threshold(img,20,255,cv2.THRESH_BINARY_INV)
+    return threshold
+
 if __name__ == '__main__':
     args = Set_argparse()
-    img = cv2.imread(args["template"])
-    show_cv(img,"template")
+    temple = cv2.imread(args["template"])
+    show_cv(temple,"template")
+
+    th_tem = tem_pretreat(temple)
+    show_cv(th_tem,"th_template")
 
