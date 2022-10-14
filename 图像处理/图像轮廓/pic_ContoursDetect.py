@@ -32,8 +32,8 @@ def cv_show(img,name):
 img = cv2.imread("pic/car.jpg")
 gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 ret, thresh = cv2.threshold(gray,127,255,cv2.THRESH_BINARY)
-cv_show(thresh,"thresh")
-
+# cv_show(thresh,"thresh")
+plt.imshow(thresh)
 # binary, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_NONE)
 contours,hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_NONE)
 """
@@ -42,8 +42,16 @@ contours： 返回的所有轮廓点
 hierarchy： 
 """
 draw_img = img.copy()
-#-1为所有轮廓，0为
+#-1为所有轮廓,其他值为制定轮廓
 res = cv2.drawContours(draw_img,contours,-1,(0,0,255),2)
-res_2 = cv2.drawContours(draw_img,contours,0,(0,0,255),2)
+res_2 = cv2.drawContours(img,contours,100,(255,0,255),2)
 res = np.hstack((res,res_2))
-cv_show(res,"res")
+# cv_show(res,"res")
+plt.imshow(res)
+
+# 轮廓特征
+cnt = contours[150]
+aera = cv2.contourArea(cnt)
+length = cv2.arcLength(cnt,True)  # True表示闭合
+
+plt.show()
