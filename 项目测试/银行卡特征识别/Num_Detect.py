@@ -24,6 +24,12 @@ def Set_argparse():
     return args
 
 def show_cv(img,name):
+    """
+    使用opencv的方法显示图像，按任意键退出图像并继续执行程序
+    :param img: opencv类型图像（np.array）
+    :param name: 显示图像的窗口名称
+    :return: None
+    """
     cv2.imshow(name,img)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
