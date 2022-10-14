@@ -5,7 +5,8 @@
 # Time       ：10/14/22 5:26 PM
 # Author     ：Kust Kenny
 # version    ：python 3.6
-# Description：
+# Description：银行卡数字识别，并可将同样的方法移植到车牌识别当中去
+#TODO： 这里之后补充整个项目实现的流程
 """
 import cv2
 import numpy as np
