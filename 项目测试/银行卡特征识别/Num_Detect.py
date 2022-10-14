@@ -29,6 +29,11 @@ def show_cv(img,name):
     cv2.destroyAllWindows()
 
 def tem_pretreat(img):
+    """
+    对于模板图像进行预处理
+    :param img: 模板图像 （BGR格式）
+    :return: 模板的灰度图像
+    """
     gray_pic = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
     ret, threshold= cv2.threshold(img,20,255,cv2.THRESH_BINARY_INV)
     return threshold
